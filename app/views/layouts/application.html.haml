@@ -5,7 +5,7 @@
     %title
       = h(yield(:title) || "Untitled")
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag "autocomplete", 'application'
     = yield(:head)
   
   %body
@@ -17,3 +17,5 @@
         %h1=h yield(:title)
       
       = yield
+      
+    = javascript_include_tag "mootools-1.2.2-core-nc", "mootools-1.2.2.1-more-dev", "clientcide.compressed", "application"

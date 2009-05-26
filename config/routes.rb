@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'home', :action => 'index'
+  map.resources :flight_co2_calculations, :only => [:new, :create]
+  map.search_airport "/airports/search.json", :controller => "airports", :action => "search"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

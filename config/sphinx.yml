@@ -1,0 +1,13 @@
+standard: &standard
+  enable_star: true
+  min_prefix_len: 3
+  
+production:
+  <<: *standard
+
+staging:
+  port: 3313
+  <<: *standard
+     
+development:
+  <<: *standard
