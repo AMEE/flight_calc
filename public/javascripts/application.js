@@ -29,11 +29,11 @@ window.addEvent('domready', function() {
 				},
 
 			onSelection: function(el, sel) { 
+				$("flight_co2_calculation_from_airport_id").set('value', sel.value); 
 					// set the correct airport id then so we can get the iata code
 				}
 			}).observer.addEvent('onFired', function(val) { 
-					// reset to empty if there is no val
-					// if(!val) $('airport_thing_id').set('value', ''); 
+					if(!val) $("flight_co2_calculation_from_airport_id").set('value', ''); 
 				});
 	}
 	
@@ -66,11 +66,11 @@ window.addEvent('domready', function() {
 				},
 
 			onSelection: function(el, sel) { 
-					// set the correct airport id then so we can get the iata code
+				$("flight_co2_calculation_to_airport_id").set('value', sel.value); 
 				}
 			}).observer.addEvent('onFired', function(val) { 
 					// reset to empty if there is no val
-					// if(!val) $('airport_thing_id').set('value', ''); 
+					if(!val) $("flight_co2_calculation_to_airport_id").set('value', ''); 
 				});
 	}
 });

@@ -6,7 +6,11 @@ class FlightCo2CalculationsController < ApplicationController
   end
   
   def create
-    
+    from_airport  = Airport.find(params[:flight_co2_calculation][:from_airport_id])
+    to_airport  = Airport.find(params[:flight_co2_calculation][:to_airport_id])
+    # OBVIOSULY NOT "HARDCODED FOR REAL"
+    @data_item = AmeeConnection.session.get_data_item("/data/transport/plane/generic/FFC7A05D54AD", 
+      :query => {:IATACode1 => from_airport.iata_code, :IATACode2 => to_airport.iata_code})
   end
   
   protected

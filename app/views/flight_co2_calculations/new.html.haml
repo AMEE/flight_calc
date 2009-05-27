@@ -1,6 +1,9 @@
 - form_tag flight_co2_calculations_path do
   = label_tag "From Airport"
   = text_field_tag "flight_co2_calculation[from_airport]", "", :style => "width: 250px"
+  = hidden_field_tag "flight_co2_calculation[from_airport_id]"
   = label_tag "To Airport"
   = text_field_tag "flight_co2_calculation[to_airport]", "", :style => "width: 250px"
+  = hidden_field_tag "flight_co2_calculation[to_airport_id]"
   = check_box_tag "flight_co2_calculation[return]"
+  = submit_tag "Calculate Co2"

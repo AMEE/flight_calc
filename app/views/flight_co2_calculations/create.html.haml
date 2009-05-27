@@ -1,0 +1,9 @@
+%p
+  YOUR FLIGHT COST THE PLANET
+  = @data_item.co2_value.to_f / 1000
+  TONNES OF Co2 Man
+  
+%p 
+  START AGAIN
+  
+  = link_to  "Try again", new_flight_co2_calculation_path
