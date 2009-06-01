@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => 'home', :action => 'index'
+  map.root :controller => 'flight_co2_calculations', :action => 'new'
   map.resources :flight_co2_calculations, :only => [:new, :create]
   map.search_airport "/airports/search.json", :controller => "airports", :action => "search"
 
