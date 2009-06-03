@@ -19,5 +19,4 @@ config.action_mailer.raise_delivery_errors = false
 Amee::Config.set do |config|
   config[:username] = "hookercookerman"
   config[:password] = "553eaec5"
-  config[:logging] = false
 end
