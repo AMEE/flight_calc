@@ -2,20 +2,17 @@
 %html{html_attrs}
   
   %head
-    %title
-      = h(yield(:title) || "Untitled")
+    %title Carbon Calculator
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag "autocomplete", 'application'
+    = stylesheet_link_tag "autocomplete", 'main'
     = yield(:head)
   
   %body
-    #container
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
-      
-      - if show_title?
-        %h1=h yield(:title)
-      
+    #page
+      %h1 Carbon Calculator
       = yield
-      
-    = javascript_include_tag "mootools-1.2.2-core-nc", "mootools-1.2.2.1-more-dev", "clientcide.compressed", "application"
+        
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/mootools/1.2.2/mootools-yui-compressed.js"}
+    = javascript_include_tag "mootools-1.2.2.2-more", "clientcide.compressed", "formcheck", "application"
+    
+    

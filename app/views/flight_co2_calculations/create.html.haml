@@ -1,12 +1,25 @@
 %p
-  YOUR FLIGHT COST THE PLANET
-  = @data_item.co2_value.to_f / 1000
-  TONNES OF Co2 Man
-  
-%p
-  = @distance
-  KM
-%p 
-  START AGAIN
-  
-  = link_to  "Try again", new_flight_co2_calculation_path
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut metus nulla. Quisque nisi libero, lacinia non tempor pretium, imperdiet sed elit. Nulla facilisi. Nunc ipsum enim, posuere ac sodales quis, aliquet pulvinar felis. Sed dapibus urna quis ante ultrices aliquam. Nullam dapibus mollis enim, et rhoncus
+
+#carbonCalculator.inactive
+  .airportEntry
+    = label_tag 'flight_co2_calculation[from_airport]', 'Origin', :id => "originLabel"
+    = text_field_tag "flight_co2_calculation[from_airport]", @origin_airport.display, :id => "flightOrigin"
+  .airportEntry
+    = label_tag 'flight_co2_calculation[from_airport]', 'Destination', :id => "destinationLabel"
+    = text_field_tag "flight_co2_calculation[to_airport]", @destination_airport.display, :id => "flightDestination"
+  #results
+    %p#stats
+      My flight covered
+      %span#distance= "#{"%.0f" % @distance} Km"
+      and produced
+      %span#mass= "#{"%.3f" % (@data_item.co2_value.to_f/1000)} tonnes " 
+      %small of carbon dioxide (CO2)
+    %p#recovery
+      It would take
+      %span#area 
+        4.4KM 
+        %sup 2
+      of rainforest, one year to absorb this
+      
+  = link_to "Start Over Enter Another Flight", root_path, :id => "submitButton"

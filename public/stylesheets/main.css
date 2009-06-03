@@ -1,0 +1,348 @@
+/*==================================================
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+=====================================================*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+
+
+/*==================================================
+	TYPOGRAPHY
+=====================================================*/
+#page{
+	font-family:Helvetica, Arial, Sans-Serif;
+}
+h1{
+	font-size:18px;
+	font-weight:bold;
+	line-height:22px;
+	margin-bottom:7px;
+}
+p{
+	font-size:12px;
+	line-height:14px;
+	margin-bottom:14px;
+}
+input#flightOrigin,
+input#flightDestination{
+	font-size:13px;
+	line-height:13px;
+}
+div.airportEntry label,
+input#submitButton{
+	font-size:13px;
+	font-weight:bold;
+	line-height:30px;
+	text-align:center;
+}
+div.returnCheck{
+	font-size:14px;
+	line-height:30px;
+}
+div#results p{
+	font-size:24px;
+	line-height:28px;
+	font-weight:bold;
+	text-align:center;
+}
+div#results p#stats span{
+	font-size:36px;
+	line-height:40px;
+}
+div#results p#recovery span{
+	font-size:58px;
+	line-height:64px;
+	text-align:right;
+	margin-right:10px;
+}
+small,sup{
+	font-size:70%;
+}
+
+sup{
+	vertical-align:top;
+}
+ul.suggestions li{
+	font-size:14px;
+	line-height:30px;
+}
+/*==================================================
+	COLOURS
+=====================================================*/
+div.airportEntry label,
+input#submitButton{
+	color:#FFF;
+}
+form.inactive input#flightOrigin,
+form.inactive input#flightDestination{
+	color:#b6b6b6;
+}
+div#results p#stats{
+	color:#919191;
+}
+div#results p#recovery{
+	color:#fff;
+}
+div#results p#stats span{
+	color:#ca0002;
+}
+div#results p#recovery span{
+	color:#e7e7e7;
+}
+ul.suggestions li{
+	color:#666666;
+}
+
+/*==================================================
+	IMAGES/BACKGROUNDS
+=====================================================*/
+div#carbonCalculator, form#carbonCalculator{
+	background: #FFF url('/images/bg_world.gif') no-repeat scroll top left;
+}
+label#originLabel{
+	background: transparent url('/images/bg_origin_label.gif') no-repeat scroll top left;
+}
+label#destinationLabel{
+	background: transparent url('/images/bg_destination_label.gif') no-repeat scroll top left;
+}
+a#submitButton, input#submitButton{
+	background: #ca0002 url('/images/bg_submit_button.gif') no-repeat scroll top left;
+}
+
+form.inactive label#originLabel{
+	background: transparent url('/images/bg_origin_label_inactive.gif') no-repeat scroll top left;
+}
+form.inactive label#destinationLabel{
+	background: transparent url('/images/bg_destination_label_inactive.gif') no-repeat scroll top left;
+}
+div#results{
+	background: transparent url('/images/bg_results.gif') no-repeat scroll top left;
+}
+ul.suggestions{
+	background: transparent url('/images/bg_grey.png') repeat scroll top left;
+}
+
+/*==================================================
+	POSITIONING/SIZES
+=====================================================*/
+#page{
+	width:585px;
+	height:400px;
+	margin:auto;
+	padding-top:9px;
+}
+h1,p{
+	margin-left:10px;
+	margin-right:10px;
+}
+div#carbonCalculator, form#carbonCalculator{
+	height:312px;
+	position:relative;
+}
+div.airportEntry{
+	float:left;
+	display:inline;
+	margin-top:12px;
+	margin-bottom:10px;
+	margin-left:10px;
+	position:relative;
+}
+div.airportEntry label{
+	height:30px;
+	display:inline;
+	float:left;
+}
+label#originLabel{
+	width:60px;
+}
+label#destinationLabel{
+	width:100px;
+}
+input#flightOrigin,
+input#flightDestination{
+	width:180px;
+	margin-top:-1px;
+	margin-left:10px;
+	padding-top:9px;
+	padding-bottom:8px;
+	border:1px solid #dadada;
+	vertical-align:bottom;
+}
+ul.suggestions{
+	position:absolute;
+	right:-10px;
+	top: 105%;
+	width:180px;
+	padding:10px;
+	float:left;
+	display:inline;
+}
+ul.suggestions li{
+	float:left;
+	display:inline;
+	padding-left:10px;
+	padding-right:10px;
+	width:160px;
+	height:30px;
+	background-color:#fff;
+	margin-bottom:1px;
+}
+
+div.returnCheck{
+	position: absolute;
+	height:30px;
+	bottom:9px;
+	right:265px;
+}
+div.returnCheck label,
+div.returnCheck input{
+	display:inline;
+	vertical-align:middle;
+}
+div.returnCheck input{
+	margin-top:-2px;
+}
+
+a#submitButton{
+	font-size:13px;
+	font-weight:bold;
+	line-height:30px;
+	text-align:center;
+	color: #fff;
+	text-decoration: none;
+}
+div.inactive a#submitButton,
+input#submitButton{
+	position: absolute;
+	display:block;
+	width:240px;
+	height:30px;
+	bottom:10px;
+	right:10px;
+	border:none;
+	cursor:pointer;
+}
+
+div#results{
+	clear:both;
+	margin-left:10px;
+	margin-right:14px;
+	width:561px;
+	height:190px;
+}
+div#results p{
+	float:left;
+	display:inline;
+	width:245px;
+	margin:0;
+}
+div#results p#stats{
+	margin-right:35px;
+	margin-top:18px;
+}
+div#results p#recovery{
+	margin-left:35px;
+	margin-top:24px;
+}
+div#results p span{
+	display:block;
+}
+/*==================================================
+	FORMCHECK
+=====================================================*/
+/* FormCheck tipbox */
+
+/* tipbox :
+	table : 
+		tl		: top left
+		t		: top
+		tr		: top right
+		l 		: left
+		r		: right
+		bl		: bottom left
+		b		: bottom (with mark)
+		br		: bottom right
+		c		: center
+	components : 
+		a.close	: close button
+		err		: errors div
+		p		: error line
+*/
+
+.fc-tbx .tl{
+	background: url('/images/tl.png') no-repeat;
+}
+.fc-tbx .t{
+	background: url('/images/t.png') no-repeat;
+	height: 26px;
+}
+.fc-tbx .tr{
+	background: url('/images/tr.png') no-repeat;
+}
+.fc-tbx .l{
+	background: url('/images/l.png') repeat-y;
+	width : 6px;
+}
+.fc-tbx .r{
+	background: url('/images/r.png') repeat-y;
+	width: 6px;
+}
+.fc-tbx .bl{
+	background: url('/images/bl.png') no-repeat;
+}
+.fc-tbx .b{
+	background: url('/images/b.png') repeat-x;
+	height:6px;
+}
+.fc-tbx .br{
+	background: url('/images/br.png') no-repeat;
+}
+.fc-tbx .c{
+	background: url('/images/c.png') repeat;
+}
+.fc-tbx a.close {
+	float: right;
+	background: url('/images/close.png') no-repeat;
+	position: relative;
+	margin-left: 5px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+.fc-tbx .err {
+
+}
+.fc-tbx p {
+	width : 240px;
+	display: block;
+	font-size: 20px;
+	line-height:24px;
+	font-weight:bold;
+	font-family: Helvetica, Arial, "sans-serif";
+	text-align:center;
+	margin : 5px 0;
+	padding : 0;
+	border : 0;
+	color : #b26a6a;
+}
+
+.ajax_loader {
+	background : url('/images/ajax-loader.gif') no-repeat center;
+	width : 200px;
+	height : 150px;
+}
+
+
+/* FormCheck validation div */
+
+.fc-error {
+	border : 1px solid #888;
+	margin-top : 5px;
+	background-color : #EAEAEA;
+}
+.fc-error p {
+	margin : 5px;
+	color : #A00;
+}

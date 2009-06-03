@@ -1,9 +1,8 @@
 // application js file
 window.addEvent('domready', function() {
 	
-	if ($("flight_co2_calculation_from_airport")){
-		var complete = new Autocompleter.Ajax.Json($('flight_co2_calculation_from_airport'), '/airports/search.json', {
-			postcode: true,
+	if ($("flightOrigin")){
+		var complete = new Autocompleter.Ajax.Json($('flightOrigin'), '/airports/search.json', {
 			minLength: 3,
 		  postVar: 'airport',
 		  postData: {}, //additional key/value sets to send with the request
@@ -29,18 +28,16 @@ window.addEvent('domready', function() {
 				},
 
 			onSelection: function(el, sel) { 
-				$("flight_co2_calculation_from_airport_id").set('value', sel.value); 
-					// set the correct airport id then so we can get the iata code
-				}
+				$("flight_co2_calculation_origin_airport_id").set('value', sel.value); 
+			}
 			}).observer.addEvent('onFired', function(val) { 
-					if(!val) $("flight_co2_calculation_from_airport_id").set('value', ''); 
+					if(!val) $("flight_co2_calculation_origin_airport_id").set('value', ''); 
 				});
 	}
 	
 	
-	if ($("flight_co2_calculation_to_airport")){
-		var complete = new Autocompleter.Ajax.Json($('flight_co2_calculation_to_airport'), '/airports/search.json', {
-			postcode: true,
+	if ($("flightDestination")){
+		var complete = new Autocompleter.Ajax.Json($('flightDestination'), '/airports/search.json', {
 			minLength: 3,
 		  postVar: 'airport',
 		  postData: {}, //additional key/value sets to send with the request
@@ -66,11 +63,24 @@ window.addEvent('domready', function() {
 				},
 
 			onSelection: function(el, sel) { 
-				$("flight_co2_calculation_to_airport_id").set('value', sel.value); 
+				$("flight_co2_calculation_destination_airport_id").set('value', sel.value); 
 				}
 			}).observer.addEvent('onFired', function(val) { 
 					// reset to empty if there is no val
-					if(!val) $("flight_co2_calculation_to_airport_id").set('value', ''); 
+					if(!val) $("flight_co2_calculation_destination_airport_id").set('value', ''); 
 				});
 	}
+	
+	// FORM CHECKS
+	var myCheck = new FormCheck('carbonCalculator', {
+		display : {
+			scrollToFirst : false,
+			tipsPosition : 'left',
+			tipsOffsetX: -60,
+			tipsOffsetY: 5
+		},
+		alerts:{
+			required:"Please make sure you have entered an airport.",
+		}
+	})
 });

@@ -1,24 +1,31 @@
-class FlightCo2CalculationsController < ApplicationController  
+class FlightCo2CalculationsController < ApplicationController 
+  before_filter :get_airports, :only => :create 
+  
   def new
-    
+    # render default template
   end
   
   def create
-    if !params[:flight_co2_calculation][:from_airport_id].empty? && !params[:flight_co2_calculation][:to_airport_id].empty?
-      from_airport  = Rails.cache.fetch("airport-#{params[:flight_co2_calculation][:from_airport_id]}") {Airport.find(params[:flight_co2_calculation][:from_airport_id])}
-      to_airport  = Rails.cache.fetch("airport-#{params[:flight_co2_calculation][:to_airport_id]}") {Airport.find(params[:flight_co2_calculation][:to_airport_id])}
-      
-      @data_item = Rails.cache.fetch("cnn-flight-#{params[:flight_co2_calculation][:from_airport_id]}-#{params[:flight_co2_calculation][:to_airport_id]}-#{params[:flight_co2_calculation][:return]}") do
-        data_item_uid =  params[:flight_co2_calculation][:return] ? AmeeConnection.auto_return_uid : AmeeConnection.auto_oneway_uid
+    if @origin_airport && @destination_airport
+      @data_item = Rails.cache.fetch([@origin_airport, @destination_airport,"data-item-#{@return_flight}"]) do
+        data_item_uid =  @return_flight ? AmeeConnection.auto_return_uid : AmeeConnection.auto_oneway_uid
         AmeeConnection.session.get_data_item("/data/transport/plane/generic/#{data_item_uid}", 
-          :query => {:IATACode1 => from_airport.iata_code, :IATACode2 => to_airport.iata_code})
+          :query => {:IATACode1 => @origin_airport.iata_code, :IATACode2 => @destination_airport.iata_code})
       end
-      @distance = Rails.cache.fetch("cnn-flight-distance-#{params[:flight_co2_calculation][:from_airport_id]}-#{params[:flight_co2_calculation][:to_airport_id]}-#{params[:flight_co2_calculation][:return]}") do
-        params[:flight_co2_calculation][:return] ? Haversine.distance_between(from_airport, to_airport) * 2 : Haversine.distance_between(from_airport, to_airport)
-      end
+      @distance = Airport.distance(@origin_airport, @destination_airport, @return_flight)
     else
-      flash[:notice] = "Please select your airports"
       render :new
+    end
+  end
+  
+  protected
+  def get_airports
+    @return_flight = params[:flight_co2_calculation][:return]
+    @origin_id = params[:flight_co2_calculation][:origin_airport_id]
+    @destination_id = params[:flight_co2_calculation][:destination_airport_id]
+    if !@origin_id.empty? && !@destination_id.empty?
+      @origin_airport = Rails.cache.fetch("airport-#{@origin_id}") {Airport.find(@origin_id)}
+      @destination_airport = Rails.cache.fetch("airport-#{@destination_id}") {Airport.find(@destination_id)}
     end
   end
 end
