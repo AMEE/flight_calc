@@ -1,0 +1,11 @@
+HTTP/1.1 302 MOVED_TEMPORARILY
+Date: Fri, 24 Apr 2009 11:29:29 GMT
+Server: Apache/2.2.9 (Debian) DAV/2 SVN/1.4.4 mod_jk/1.2.18 mod_python/3.2.10 Python/2.4.4 PHP/5.2.0-10 mod_ssl/2.2.9 OpenSSL/0.9.8g Phusion_Passenger/2.0.3
+Content-Length: 0
+Set-Cookie: authToken=UjWX6DYFsMzHov+IQCnu3Ad00fwOl/mAKYcdd2u6pLFs1bnBp5FedvDd/FjrnrwRPrnuEhAexWmlEbFV8XRXJ11KbZD2NGbMVnnwIvDFI7TfqZ/OgnHR2w==; Path=/
+Location: http://stage.amee.com/auth
+Accept-Ranges: bytes
+authToken: UjWX6DYFsMzHov+IQCnu3Ad00fwOl/mAKYcdd2u6pLFs1bnBp5FedvDd/FjrnrwRPrnuEhAexWmlEbFV8XRXJ11KbZD2NGbMVnnwIvDFI7TfqZ/OgnHR2w==
+Cache-Control: max-age=3600
+Expires: Fri, 24 Apr 2011 12:29:29 GMT
+Content-Type: text/plain

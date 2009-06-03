@@ -1,0 +1,40 @@
+= Amee
+
+== DESCRIPTION:
+
+Amee is a Ruby wrapper over the "AMEE carbon calculator"[http://www.amee.com]
+
+* Idiomatic Ruby
+* Concrete classes and methods modeling Amee data, so it's easy for a Rubyist to understand what's available
+* Cucumber Features and specs
+* AMEE API 2.0 Support
+
+== DOCUMENTATION
+
+* http://wiki.github.com/hookercookerman/amee
+
+== REQUIREMENTS:
+
+Monetra
+Httparty
+will_paginate (if you want to paginate data_items)
+
+== INSTALL:
+
+ * Non Rails
+
+The best way is:
+
+  gem install hookercookerman-amee
+
+Amee can be installed as a Rails plugin by:
+
+  script/plugin install git@github.com:hookercookerman/amee.git
+
+= TICKETS GROUP
+
+* https://dynamic50.lighthouseapp.com/projects/29811-amee/overview
+
+* http://groups.google.com/group/amee-gem
+
+
