@@ -8,6 +8,7 @@ class AmeeConnection
   end
   
   def self.auto_return_uid
-    @auto_return_uid ||= session.get_data_category("/data/transport/plane/generic").drill(:size => "return", :type => "auto").data_item_uid
+    @auto_return_uid ||= session.get_data_category("/data/transpor
+    t/plane/generic").drill(:size => "return", :type => "auto").data_item_uid
   end
 end

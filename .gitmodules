@@ -19,9 +19,6 @@
 [submodule "vendor/plugins/pickle"]
 	path = vendor/plugins/pickle
 	url = git://github.com/ianwhite/pickle.git
-[submodule "vendor/plugins/amee"]
-	path = vendor/plugins/amee
-	url = git@github.com:hookercookerman/amee.git
 [submodule "vendor/plugins/thinking-sphinx"]
 	path = vendor/plugins/thinking-sphinx
 	url = git://github.com/freelancing-god/thinking-sphinx.git

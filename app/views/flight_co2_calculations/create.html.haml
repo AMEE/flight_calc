@@ -4,10 +4,10 @@
 #carbonCalculator.inactive
   .airportEntry
     = label_tag 'flight_co2_calculation[from_airport]', 'Origin', :id => "originLabel"
-    = text_field_tag "flight_co2_calculation[from_airport]", @origin_airport.display, :id => "flightOrigin"
+    = text_field_tag "flight_co2_calculation[from_airport]", @origin_airport.display
   .airportEntry
     = label_tag 'flight_co2_calculation[from_airport]', 'Destination', :id => "destinationLabel"
-    = text_field_tag "flight_co2_calculation[to_airport]", @destination_airport.display, :id => "flightDestination"
+    = text_field_tag "flight_co2_calculation[to_airport]", @destination_airport.display
   #results
     %p#stats
       My flight covered
