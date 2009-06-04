@@ -1,0 +1,3 @@
+# /etc/apache2/mods-available/passenger.conf
+#
+LoadModule passenger_module /opt/passenger/ext/apache2/mod_passenger.so
