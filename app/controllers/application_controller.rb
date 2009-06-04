@@ -4,7 +4,17 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  
+  before_filter :authenticate_global
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  
+  protected
+  def authenticate_global
+    if ['staging'].include?(Rails.env)
+      authenticate_or_request_with_http_basic do |user_name, password|
+        user_name == "admin" && password == "cnn"
+      end
+    end
+  end
 end
