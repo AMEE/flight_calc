@@ -7,7 +7,7 @@
         ServerAlias assets2.dynamic50.com
         ServerAlias assets3.dynamic50.com
 
-	  DocumentRoot "/opt/apps/cnn_production/current/public"
+	  DocumentRoot "/opt/apps/cnn-carbon-calculator/current/public"
 	  RailsEnv production
 	  # RailsAllowModRewrite off
 	  #
@@ -17,7 +17,7 @@
 	  RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
 	  RewriteCond %{SCRIPT_FILENAME} !maintenance.html
       RewriteRule ^.*$ /system/maintenance.html [L]
-	  <Directory "/opt/apps/cnn_production/current/public">
+	  <Directory "/opt/apps/cnn-carbon-calculator/current/public">
 	    Order allow,deny
 	    Allow from all
 	  </Directory>
