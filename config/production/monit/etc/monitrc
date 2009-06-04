@@ -31,7 +31,7 @@ set logfile syslog facility log_daemon
 ## specified using comma separator. By default monit uses port 25 - this
 ## is possible to override with the PORT option.
 #
-# set mailserver localhost     # primary mailserver (append a comma
+set mailserver localhost     # primary mailserver (append a comma
 #				# to this line if you add more.)
 #                backup.bar.baz port 10025,  # backup mailserver on port 10025
 #                localhost                   # fallback relay
@@ -70,7 +70,7 @@ set logfile syslog facility log_daemon
 ## or sender using the MAIL-FORMAT statement. Macros such as $DATE, etc.
 ## are expanded at runtime. For example, to override the sender:
 #
-# set mail-format { from: monit@deprec.enabled.slice }
+set mail-format { from: monit@cnn.dynamic50.com }
 #
 #
 ## You can set alert recipients here whom will receive alerts if/when a 
@@ -78,7 +78,7 @@ set logfile syslog facility log_daemon
 ## events by using a filter as in the second example below. 
 #
 
-# set alert root@localhost                       # receive all alerts
+set alert team@dynamic50.com                       # receive all alerts
 
 
 # set alert root@localhost only on { timeout }  # receive just service-
