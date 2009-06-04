@@ -14,7 +14,7 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :lib => 'haml'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
   config.gem 'rack', :version => '~> 1.0'
-  config.gem "amee"
+  config.gem 'hookercookerman-amee', :lib => 'amee'
   config.gem "httparty", :version => '~> 0.4.3'
   config.gem "wycats-moneta", :lib => "moneta", :source => 'http://gems.github.com'
   # Settings in config/environments/* take precedence over those specified here.
