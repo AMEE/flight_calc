@@ -11,6 +11,7 @@ Rails::Initializer.run do |config|
   config.gem 'nokogiri', :lib => 'nokogiri', :source => 'http://gems.rubyforge.org'
   config.gem 'faker', :lib => 'faker', :version => '~> 0.3.1'
   config.gem 'rack_hoptoad'
+  config.gem 'json_pure'
   config.gem 'haml', :lib => 'haml'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
   config.gem 'rack', :version => '~> 1.0'
