@@ -10,7 +10,6 @@ Rails::Initializer.run do |config|
   config.gem 'treetop', :source => 'http://gems.rubyforge.org'
   config.gem 'nokogiri', :lib => 'nokogiri', :source => 'http://gems.rubyforge.org'
   config.gem 'faker', :lib => 'faker', :version => '~> 0.3.1'
-  config.gem 'rack_hoptoad'
   config.gem 'haml', :lib => 'haml'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
   config.gem 'rack', :version => '~> 1.0'
@@ -33,7 +32,6 @@ Rails::Initializer.run do |config|
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
-  config.middleware.use "Rack::HoptoadNotifier", 'fd48c7d26f724503a0280f808f44b339fc65fab8'
   config.cache_store = :mem_cache_store
   config.cache_store = :mem_cache_store, "127.0.0.1:11211"
   config.cache_store = :mem_cache_store, { :namespace => 'cnn-flight' }
