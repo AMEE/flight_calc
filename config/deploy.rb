@@ -18,7 +18,7 @@ set :password, "80shour2"
 set :git_shallow_clone, 1 # We don't need the full history
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
-default_run_options[:pty] = true
+# default_run_options[:pty] = true
 
 # Some custom tasks
 namespace :rake do
