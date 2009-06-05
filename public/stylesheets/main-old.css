@@ -25,9 +25,7 @@ p{
 	margin-bottom:14px;
 }
 input#flightOrigin,
-input#flightDestination,
-input#flight_co2_calculation_origin_airport_id,
-input#flight_co2_calculation_destination_airport_id{
+input#flightDestination{
 	font-size:13px;
 	line-height:13px;
 }
@@ -51,14 +49,12 @@ div#results p{
 div#results p#stats span{
 	font-size:36px;
 	line-height:40px;
-	text-transform:lowercase;
 }
 div#results p#recovery span{
 	font-size:58px;
 	line-height:64px;
 	text-align:right;
 	margin-right:10px;
-	text-transform:lowercase;
 }
 small,sup{
 	font-size:70%;
@@ -78,10 +74,8 @@ div.airportEntry label,
 input#submitButton{
 	color:#FFF;
 }
-.inactive input#flightOrigin,
-.inactive input#flightDestination
-.inactive input#flight_co2_calculation_origin_airport_id,
-.inactive input#flight_co2_calculation_destination_airport_id{
+form.inactive input#flightOrigin,
+form.inactive input#flightDestination{
 	color:#b6b6b6;
 }
 div#results p#stats{
@@ -116,10 +110,10 @@ a#submitButton, input#submitButton{
 	background: #ca0002 url('/images/bg_submit_button.gif') no-repeat scroll top left;
 }
 
-.inactive label#originLabel{
+form.inactive label#originLabel{
 	background: transparent url('/images/bg_origin_label_inactive.gif') no-repeat scroll top left;
 }
-.inactive label#destinationLabel{
+form.inactive label#destinationLabel{
 	background: transparent url('/images/bg_destination_label_inactive.gif') no-repeat scroll top left;
 }
 div#results{
@@ -142,8 +136,7 @@ h1,p{
 	margin-left:10px;
 	margin-right:10px;
 }
-div#carbonCalculator,
-form#carbonCalculator{
+div#carbonCalculator, form#carbonCalculator{
 	height:312px;
 	position:relative;
 }
@@ -167,9 +160,7 @@ label#destinationLabel{
 	width:100px;
 }
 input#flightOrigin,
-input#flightDestination,
-input#flight_co2_calculation_origin_airport_id,
-input#flight_co2_calculation_destination_airport_id{
+input#flightDestination{
 	width:180px;
 	margin-top:-1px;
 	margin-left:10px;
@@ -178,14 +169,6 @@ input#flight_co2_calculation_destination_airport_id{
 	border:1px solid #dadada;
 	vertical-align:bottom;
 }
-form#carbonCalculator input#flight_co2_calculation_origin_airport_id,
-form#carboncalculator input#flight_co2_calculation_destination_airport_id{
-	position:absolute;
-	top:0;
-	right:0;
-	visibility:hidden;
-}
-
 ul.suggestions{
 	position:absolute;
 	right:-10px;
@@ -229,7 +212,7 @@ a#submitButton{
 	color: #fff;
 	text-decoration: none;
 }
-.inactive a#submitButton,
+div.inactive a#submitButton,
 input#submitButton{
 	position: absolute;
 	display:block;
