@@ -1,0 +1,10 @@
+--- 
+user: app_cnn-carbon-calculator
+group: app_cnn-carbon-calculator
+cwd: /opt/apps/cnn-carbon-calculator/current
+log_file: /opt/apps/cnn-carbon-calculator/shared/log/mongrel.log
+port: "8000"
+environment: production
+address: 127.0.0.1
+pid_file: /opt/apps/cnn-carbon-calculator/shared/pids/mongrel.pid
+servers: 2

@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   
   protected
   def authenticate_global
-    if ['staging'].include?(Rails.env)
+    if ['production'].include?(Rails.env)
       authenticate_or_request_with_http_basic do |user_name, password|
         user_name == "admin" && password == "cnn"
       end
