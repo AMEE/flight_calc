@@ -8,12 +8,12 @@ window.addEvent('domready', function() {
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
 					onRequest: function(){
-						$("flightOrigin").setStyle("background-image", "url(/images/ajax-loader.gif)");
+						$("flightOrigin").addClass("loading");
 				}, onFailure: function(){
-						$("flightOrigin").setStyle("background-image", "none");
+						$("flightOrigin").removeClass("loading");
 				},
 					onComplete: function(){
-						$("flightOrigin").setStyle("background-image", "none");
+						$("flightOrigin").removeClass("loading");
 					}},
 			overflow: true,
 			injectChoice: function(token) { 
@@ -43,12 +43,12 @@ window.addEvent('domready', function() {
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
 					onRequest: function(){
-						$("flightDestination").setStyle("background-image", "url(/images/ajax-loader.gif)");
+						$("flightDestination").addClass("loading");
 				}, onFailure: function(){
-						$("flightDestination").setStyle("background-image", "none");
+						$("flightDestination").removeClass("loading");
 				},
 					onComplete: function(){
-						$("flightDestination").setStyle("background-image", "none");
+						$("flightDestination").removeClass("loading");
 					}},
 			overflow: true,
 			injectChoice: function(token) { 

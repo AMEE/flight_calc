@@ -121,8 +121,7 @@ div#carbonCalculator, form#carbonCalculator{
 	background: transparent url('/images/bg_destination_label.gif') no-repeat scroll top left;
 }
 
-input#flightOrigin,
-input#flightDestination{
+input.loading{
 	background: #fff url('/images/ajax-loader.gif') no-repeat scroll right 7px;
 }
 
