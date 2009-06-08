@@ -3,7 +3,7 @@ window.addEvent('domready', function() {
 	
 	if ($("flightOrigin")){
 		var complete = new Autocompleter.Ajax.Json($('flightOrigin'), '/airports/search.json', {
-			minLength: 3,
+			minLength: 1,
 		  postVar: 'airport',
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
@@ -38,7 +38,7 @@ window.addEvent('domready', function() {
 	
 	if ($("flightDestination")){
 		var complete = new Autocompleter.Ajax.Json($('flightDestination'), '/airports/search.json', {
-			minLength: 3,
+			minLength: 1,
 		  postVar: 'airport',
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 

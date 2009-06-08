@@ -28,7 +28,7 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 # We dont have prod password and shit just yet!
-Amee::Config.set do |config|
+::Amee::Config.set do |config|
   config[:username] = "hookercookerman"
   config[:password] = "553eaec5"
 end

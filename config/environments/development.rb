@@ -15,8 +15,8 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
-
-Amee::Config.set do |config|
+# 
+::Amee::Config.set do |config|
   config[:username] = "hookercookerman"
   config[:password] = "553eaec5"
 end
