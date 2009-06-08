@@ -8,12 +8,12 @@ window.addEvent('domready', function() {
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
 					onRequest: function(){
-						// Ajax indicator basically
+						$("flightOrigin").setStyle("background-image", "url(/images/ajax-loader.gif)");
 				}, onFailure: function(){
-						// tell user failure hmm
+						$("flightOrigin").setStyle("background-image", "none");
 				},
 					onComplete: function(){
-						// hide the ajax
+						$("flightOrigin").setStyle("background-image", "none");
 					}},
 			overflow: true,
 			injectChoice: function(token) { 
@@ -43,12 +43,12 @@ window.addEvent('domready', function() {
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
 					onRequest: function(){
-						// Ajax indicator basically
+						$("flightDestination").setStyle("background-image", "url(/images/ajax-loader.gif)");
 				}, onFailure: function(){
-						// tell user failure hmm
+						$("flightDestination").setStyle("background-image", "none");
 				},
 					onComplete: function(){
-						// hide the ajax
+						$("flightDestination").setStyle("background-image", "none");
 					}},
 			overflow: true,
 			injectChoice: function(token) { 
