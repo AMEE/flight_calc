@@ -4,11 +4,11 @@
 - form_tag flight_co2_calculations_path, :id => "carbonCalculator" do
   .airportEntry
     = label_tag 'flight_co2_calculation[origin_airport]', 'Origin', :id => "originLabel"
-    = text_field_tag "flight_co2_calculation[origin_airport]", "", :id => "flightOrigin"
+    = text_field_tag "flight_co2_calculation[origin_airport]", "", :id => "flightOrigin", :style => "background-image:none"
     = text_field_tag "flight_co2_calculation[origin_airport_id]", "", :class => "validate['required']"
   .airportEntry
     = label_tag 'flight_co2_calculation[destination_airport]', 'Destination', :id => "destinationLabel"
-    = text_field_tag "flight_co2_calculation[destination_airport]", "", :id => "flightDestination"
+    = text_field_tag "flight_co2_calculation[destination_airport]", "", :id => "flightDestination", :style => "background-image:none"
     = text_field_tag "flight_co2_calculation[destination_airport_id]", "", :class => "validate['required']"
   .returnCheck
     = label_tag "flight_co2_calculation[return]", "Return Flight?", :id => "returnFlightLabel"
