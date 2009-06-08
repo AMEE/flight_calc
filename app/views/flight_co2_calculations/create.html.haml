@@ -3,11 +3,13 @@
 
 #carbonCalculator.inactive
   .airportEntry
-    = label_tag 'flight_co2_calculation[from_airport]', 'Origin', :id => "originLabel"
-    = text_field_tag "flight_co2_calculation[from_airport]", @origin_airport.display
+    #originLabel Origin
+    #flight_co2_calculation_from_airport
+      = @origin_airport.display
   .airportEntry
-    = label_tag 'flight_co2_calculation[from_airport]', 'Destination', :id => "destinationLabel"
-    = text_field_tag "flight_co2_calculation[to_airport]", @destination_airport.display
+    #destinationLabel Destination
+    #flight_co2_calculation_to_airport
+      = @destination_airport.display
   #results
     %p#stats
       My flight covered
@@ -18,8 +20,7 @@
     %p#recovery
       It would take
       %span#area 
-        = "#{"%.1f" % ((@data_item.co2_value.to_f/1000)*20)} KM"
-        %sup 2
+        = "#{"%.1f" % ((@data_item.co2_value.to_f/1000)*20)} KM<sup>2</sup>"
       of rainforest one year to absorb this
       
   = link_to "Enter another flight", root_path, :id => "submitButton"
