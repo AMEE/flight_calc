@@ -8,12 +8,12 @@ window.addEvent('domready', function() {
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
 					onRequest: function(){
-						$("flightOrigin").addClass("loading");
+						$("flightOrigin").setStyle("background-image", "url(/images/ajax-loader.gif)");
 				}, onFailure: function(){
-						$("flightOrigin").removeClass("loading");
+						$("flightOrigin").setStyle("background-image", "none");
 				},
 					onComplete: function(){
-						$("flightOrigin").removeClass("loading");
+						$("flightOrigin").setStyle("background-image", "none");
 					}},
 			overflow: true,
 			injectChoice: function(token) { 
@@ -43,12 +43,12 @@ window.addEvent('domready', function() {
 		  postData: {}, //additional key/value sets to send with the request
 		    ajaxOptions: {method: "get", 
 					onRequest: function(){
-						$("flightDestination").addClass("loading");
+						$("flightDestination").setStyle("background-image", "url(/images/ajax-loader.gif)");
 				}, onFailure: function(){
-						$("flightDestination").removeClass("loading");
+						$("flightDestination").setStyle("background-image", "none");
 				},
 					onComplete: function(){
-						$("flightDestination").removeClass("loading");
+						$("flightDestination").setStyle("background-image", "none");
 					}},
 			overflow: true,
 			injectChoice: function(token) { 
@@ -80,7 +80,8 @@ window.addEvent('domready', function() {
 			tipsOffsetY: 5
 		},
 		alerts:{
-			required:"Please make sure you have entered an airport.",
+			required:"Please make sure you have entered an airport."
 		}
-	})
+	});
+	
 });
