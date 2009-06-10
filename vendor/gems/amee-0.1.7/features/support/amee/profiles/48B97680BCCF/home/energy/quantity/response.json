@@ -1,9 +1,0 @@
-HTTP/1.1 201 Created
-Location: whatever
-Cache-Control: private
-Content-Type: text/html; charset=UTF-8
-Date: Thu, 23 Apr 2009 17:11:42 GMT
-Server: gws
-Content-Length: 221
-
-egg

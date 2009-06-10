@@ -12,7 +12,7 @@ Rails::Initializer.run do |config|
   config.gem 'faker', :lib => 'faker', :version => '~> 0.3.1'
   config.gem 'haml', :lib => 'haml'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
-  config.gem 'hookercookerman-amee', :lib => 'amee'
+  config.gem 'hookercookerman-amee', :lib => 'amee', :version => "~> 0.1.8"
   config.gem "httparty", :version => '~> 0.4.3'
   config.gem "wycats-moneta", :lib => "moneta", :source => 'http://gems.github.com'
   # Settings in config/environments/* take precedence over those specified here.
@@ -51,3 +51,5 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+Amee.logger = RAILS_DEFAULT_LOGGER
