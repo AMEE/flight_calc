@@ -1,6 +1,8 @@
 class FlightCo2CalculationsController < ApplicationController 
   before_filter :get_airports, :only => :create 
   
+  caches_page :new
+  
   def new
     # render default template
   end
