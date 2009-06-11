@@ -22,3 +22,6 @@
 [submodule "vendor/plugins/thinking-sphinx"]
 	path = vendor/plugins/thinking-sphinx
 	url = git://github.com/freelancing-god/thinking-sphinx.git
+[submodule "vendor/plugins/run_later"]
+	path = vendor/plugins/run_later
+	url = git://github.com/mattmatt/run_later.git

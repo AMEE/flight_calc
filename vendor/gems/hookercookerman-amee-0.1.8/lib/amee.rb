@@ -36,5 +36,5 @@ require "amee/profile_api/profile_category"
 require "amee/profile_api/profile"
 
 module Amee
-  VERSION = '0.1.7'
+  VERSION = '0.1.8'
 end

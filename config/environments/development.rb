@@ -20,3 +20,5 @@ config.action_mailer.raise_delivery_errors = false
   config[:username] = "hookercookerman"
   config[:password] = "553eaec5"
 end
+
+CNN_AMEE_PROFILE = "241EE37F2D38"

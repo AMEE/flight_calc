@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{amee}
-  s.version = '0.1.7'
+  s.version = '0.1.8'
   
   s.homepage = 'http://github.com/hookercookerman/amee/tree/master'
   s.description = %q{Its a gem to interact with the amee api}

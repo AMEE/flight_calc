@@ -12,7 +12,7 @@ namespace :amee do
      
      puts "--- Asking Amee for the airport data"
      session = AmeeConnection.session
-     airport_category = session.get_data_category("/data/transport/plane/generic/airports/countries", :query => {:itemsPerPage => 497})
+     airport_category = session.get_data_category("/data/transport/plane/generic/airports/all/countries", :query => {:itemsPerPage => 4000})
      airports = airport_category.data_items
      airports.each do |airport_item|
        puts "--- Adding Airport"

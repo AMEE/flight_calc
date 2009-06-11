@@ -1,7 +1,7 @@
 --- !ruby/object:Gem::Specification 
-name: amee
+name: hookercookerman-amee
 version: !ruby/object:Gem::Version 
-  version: 0.1.7
+  version: 0.1.8
 platform: ruby
 authors: 
 - Richard Hooker
@@ -9,7 +9,7 @@ autorequire:
 bindir: bin
 cert_chain: []
 
-date: 2009-06-03 00:00:00 +01:00
+date: 2009-04-24 00:00:00 +01:00
 default_executable: 
 dependencies: 
 - !ruby/object:Gem::Dependency 
@@ -32,13 +32,47 @@ dependencies:
       - !ruby/object:Gem::Version 
         version: 1.8.0
     version: 
-description: |-
-  Amee is a Ruby wrapper over the "AMEE carbon calculator"[http://www.amee.com]
-  
-  * Idiomatic Ruby
-  * Concrete classes and methods modeling Amee data, so it's easy for a Rubyist to understand what's available
-  * Cucumber Features and specs
-  * AMEE API 2.0 Support
+- !ruby/object:Gem::Dependency 
+  name: fakeweb
+  type: :development
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: httparty
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - "="
+      - !ruby/object:Gem::Version 
+        version: 0.4.3
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: wycats-moneta
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: mislav-will_paginate
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 2.2.3
+    version: 
+description: Its a gem to interact with the amee api
 email: 
 - richard.hooker@dynamic50.com
 executables: []
@@ -134,13 +168,15 @@ files:
 - tasks/rspec.rake
 - tasks/yard.rake
 has_rdoc: true
-homepage: 
+homepage: http://github.com/hookercookerman/amee/tree/master
 licenses: []
 
 post_install_message: 
 rdoc_options: 
 - --main
 - README.rdoc
+- --inline-source
+- --charset=UTF-8
 require_paths: 
 - lib
 required_ruby_version: !ruby/object:Gem::Requirement 
@@ -161,6 +197,6 @@ rubyforge_project: amee
 rubygems_version: 1.3.3
 signing_key: 
 specification_version: 3
-summary: Amee is a Ruby wrapper over the "AMEE carbon calculator"[http://www.amee.com]  * Idiomatic Ruby * Concrete classes and methods modeling Amee data, so it's easy for a Rubyist to understand what's available * Cucumber Features and specs * AMEE API 2.0 Support
+summary: Amee
 test_files: []
 
