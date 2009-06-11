@@ -45,6 +45,10 @@ namespace :rake do
   task :clear_cache do
     run("cd #{deploy_to}/current; script/console #{stage}; Rails.cache.clear; quit")
   end
+  
+  task :tail_logs do
+    run("cd #{deploy_to}/shared/log; tail -f #{stage}.log")
+  end
 end
 
 # Memcached
