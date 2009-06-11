@@ -24,6 +24,8 @@ namespace :deploy do
     EOF
     
     put db_config, "#{release_path}/config/database.yml"
+    
+   
   end
   
   task :restart, :roles => :app, :except => { :no_release => true } do

@@ -49,7 +49,20 @@ namespace :rake do
   task :tail_logs do
     run("cd #{deploy_to}/shared/log; tail -f #{stage}.log")
   end
+  
+  
 end
+
+namespace :deploy do
+  task :before_restart do
+    sphinx_symlink
+  end
+  
+  task :sphinx_symlink do
+   run("ln -s #{shared_path}/db/sphinx/production #{current_path}/db/sphinx/production")
+  end
+end
+
 
 # Memcached
 namespace :deprec do
