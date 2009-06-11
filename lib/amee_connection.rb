@@ -10,4 +10,8 @@ class AmeeConnection
   def self.auto_return_uid
     @auto_return_uid ||= session.get_data_category("/data/transport/plane/generic").drill(:size => "return", :type => "auto").data_item_uid
   end
+  
+  def self.profile
+    @cnn_profile = session.get_profile(CNN_AMEE_PROFILE)
+  end
 end
