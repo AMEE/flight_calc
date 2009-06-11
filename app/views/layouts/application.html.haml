@@ -5,6 +5,10 @@
     %title Carbon Calculator
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag "autocomplete", 'main'
+    /[if IE]
+      %style{:type => "text/css"}
+        @import url(/stylesheets/ie.css);
+      %script{:src => "/png-fix/iepngfix_tilebg.js", :type => "text/javascript"}
     = yield(:head)
   
   %body

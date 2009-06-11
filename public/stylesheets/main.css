@@ -112,13 +112,13 @@ ul.suggestions li{
 	IMAGES/BACKGROUNDS
 =====================================================*/
 div#carbonCalculator, form#carbonCalculator{
-	background: #FFF url('/images/bg_world.gif') no-repeat scroll top left;
+	background: #FFF url('/images/bg_world.png') no-repeat scroll top left;
 }
 #originLabel{
-	background: transparent url('/images/bg_origin_label.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_origin_label.png') no-repeat scroll top left;
 }
 #destinationLabel{
-	background: transparent url('/images/bg_destination_label.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_destination_label.png') no-repeat scroll top left;
 }
 
 input.loading{
@@ -126,20 +126,28 @@ input.loading{
 }
 
 #submitButton{
-	background: #ca0002 url('/images/bg_submit_button.gif') no-repeat scroll top left;
+	background: #ca0002 url('/images/bg_submit_button.png') no-repeat scroll top left;
 }
 
 .inactive #originLabel{
-	background: transparent url('/images/bg_origin_label_inactive.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_origin_label_inactive.png') no-repeat scroll top left;
 }
 .inactive #destinationLabel{
-	background: transparent url('/images/bg_destination_label_inactive.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_destination_label_inactive.png') no-repeat scroll top left;
 }
 div#results{
-	background: transparent url('/images/bg_results.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_results.png') no-repeat scroll top left;
 }
 ul.suggestions{
 	background: transparent url('/images/bg_grey.png') repeat scroll top left;
+}
+div#powered_by {
+	bottom: 4px;
+	left:2px;
+	position:absolute;
+	
+
+	
 }
 
 /*==================================================
@@ -315,14 +323,14 @@ div#results p span{
 */
 
 .fc-tbx .tl{
-	background: url('/images/tl.png') no-repeat;
+	background: url('/images/tl.gif') no-repeat;
 }
 .fc-tbx .t{
-	background: url('/images/t.png') no-repeat;
+	background: url('/images/t.gif') no-repeat;
 	height: 26px;
 }
 .fc-tbx .tr{
-	background: url('/images/tr.png') no-repeat;
+	background: url('/images/tr.gif') no-repeat;
 }
 .fc-tbx .l{
 	background: url('/images/l.png') repeat-y;

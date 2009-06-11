@@ -1,5 +1,5 @@
 %p
-  Enter your origin and destination airports or airport codes below to calculate the carbon emissions for your flight.
+  Enter your origin and destination airports or airport codes below to calculate your share of the carbon emissions for your flight.
 
 - form_tag flight_co2_calculations_path, :id => "carbonCalculator" do
   .airportEntry
@@ -14,3 +14,6 @@
     = label_tag "flight_co2_calculation[return]", "Return Flight?", :id => "returnFlightLabel"
     = check_box_tag "flight_co2_calculation[return]", "", false, :id => "returnFlightCheck"
   = submit_tag "Calculate My Carbon Emissions", :id => "submitButton"
+  
+  #powered_by
+    = link_to image_tag("/images/amee.png", :alt => "powered by AMEE"), "http://amee.cc"

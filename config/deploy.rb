@@ -42,7 +42,9 @@ namespace :rake do
     run("cd #{deploy_to}/current; /usr/local/bin/rake thinking_sphinx:configure RAILS_ENV=#{stage}")
   end
   
-  
+  task :clear_cache do
+    run("cd #{deploy_to}/current; script/console #{stage}; Rails.cache.clear; quit")
+  end
 end
 
 # Memcached
