@@ -141,6 +141,13 @@ div#results{
 ul.suggestions{
 	background: transparent url('/images/bg_grey.png') repeat scroll top left;
 }
+div#powered_by {
+	bottom: 47px;
+	position:absolute;
+	
+
+	
+}
 
 /*==================================================
 	POSITIONING/SIZES
