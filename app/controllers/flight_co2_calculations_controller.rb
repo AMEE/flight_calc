@@ -15,6 +15,14 @@ class FlightCo2CalculationsController < ApplicationController
           :query => {:IATACode1 => @origin_airport.iata_code, :IATACode2 => @destination_airport.iata_code})
       end
       @distance = Airport.distance(@origin_airport, @destination_airport, @return_flight)
+      run_later do
+        AmeeConnection.profile.create_profile_item("/transport/plane/generic", @data_item.uid, 
+          :fields => {
+            :name => UUIDTools::UUID.timestamp_create.to_s, 
+            :IATACode1 => @origin_airport.iata_code, 
+            :IATACode2 => @destination_airport.iata_code
+          })
+      end
     else
       render :new
     end

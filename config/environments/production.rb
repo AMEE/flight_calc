@@ -31,7 +31,7 @@ config.action_view.cache_template_loading            = true
 ::Amee::Config.set do |config|
   config[:username] = "cnn"
   config[:password] = "aa221361"
-  config[:server] = "stage.amee.com"
+  config[:server] = "live.amee.com"
 end
 
-CNN_AMEE_PROFILE = "D3731616E349"
+CNN_AMEE_PROFILE = "9D7C819AB003"
