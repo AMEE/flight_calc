@@ -115,28 +115,28 @@ div#carbonCalculator, form#carbonCalculator{
 	background: #FFF url('/images/bg_world.png') no-repeat scroll top left;
 }
 #originLabel{
-	background: transparent url('/images/bg_origin_label.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_origin_label.png') no-repeat scroll top left;
 }
 #destinationLabel{
-	background: transparent url('/images/bg_destination_label.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_destination_label.png') no-repeat scroll top left;
 }
 
 input.loading{
-	background: #fff url('/images/ajax-loader.gif') no-repeat scroll right 7px;
+	background: #fff url('/images/ajax-loader.png') no-repeat scroll right 7px;
 }
 
 #submitButton{
-	background: #ca0002 url('/images/bg_submit_button.gif') no-repeat scroll top left;
+	background: #ca0002 url('/images/bg_submit_button.png') no-repeat scroll top left;
 }
 
 .inactive #originLabel{
-	background: transparent url('/images/bg_origin_label_inactive.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_origin_label_inactive.png') no-repeat scroll top left;
 }
 .inactive #destinationLabel{
-	background: transparent url('/images/bg_destination_label_inactive.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_destination_label_inactive.png') no-repeat scroll top left;
 }
 div#results{
-	background: transparent url('/images/bg_results.gif') no-repeat scroll top left;
+	background: transparent url('/images/bg_results.png') no-repeat scroll top left;
 }
 ul.suggestions{
 	background: transparent url('/images/bg_grey.png') repeat scroll top left;
