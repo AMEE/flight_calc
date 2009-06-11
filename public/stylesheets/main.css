@@ -112,7 +112,7 @@ ul.suggestions li{
 	IMAGES/BACKGROUNDS
 =====================================================*/
 div#carbonCalculator, form#carbonCalculator{
-	background: #FFF url('/images/bg_world.gif') no-repeat scroll top left;
+	background: #FFF url('/images/bg_world.png') no-repeat scroll top left;
 }
 #originLabel{
 	background: transparent url('/images/bg_origin_label.gif') no-repeat scroll top left;
