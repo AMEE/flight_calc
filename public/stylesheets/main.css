@@ -122,7 +122,7 @@ div#carbonCalculator, form#carbonCalculator{
 }
 
 input.loading{
-	background: #fff url('/images/ajax-loader.png') no-repeat scroll right 7px;
+	background: #fff url('/images/ajax-loader.gif') no-repeat scroll right 7px;
 }
 
 #submitButton{
@@ -323,14 +323,14 @@ div#results p span{
 */
 
 .fc-tbx .tl{
-	background: url('/images/tl.png') no-repeat;
+	background: url('/images/tl.gif') no-repeat;
 }
 .fc-tbx .t{
-	background: url('/images/t.png') no-repeat;
+	background: url('/images/t.gif') no-repeat;
 	height: 26px;
 }
 .fc-tbx .tr{
-	background: url('/images/tr.png') no-repeat;
+	background: url('/images/tr.gif') no-repeat;
 }
 .fc-tbx .l{
 	background: url('/images/l.png') repeat-y;
