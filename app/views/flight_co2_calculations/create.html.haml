@@ -12,11 +12,14 @@
       = @destination_airport.display
   #results
     %p#stats
-      My flight covered
+      - unless @return_flight
+        My flight covered
+      - else
+        My flights covered
       %span#distance= "#{"%.0f" % @distance} Km"
       and produced
       %span#mass= "#{"%.3f" % (@data_item.co2_value.to_f/1000)} tonnes " 
-      %small of carbon dioxide (CO2)
+      %small of CO2 per person
     %p#recovery
       It would take
       %span#area 
@@ -27,4 +30,4 @@
   
   
   #powered_by
-    = link_to image_tag("/images/amee.png", :alt => "powered by AMEE"), "http://amee.cc"
+    = link_to image_tag("/images/amee.png", :alt => "powered by AMEE"), "http://amee.cc", :target => "_blank"
