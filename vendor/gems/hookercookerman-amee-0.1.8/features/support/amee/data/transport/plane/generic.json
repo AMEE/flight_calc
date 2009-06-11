@@ -1,0 +1,225 @@
+{
+  "dataCategory":{
+    "uid":"FBA97B70DBDF",
+    "dataCategory":{
+      "uid":"6F3692D81CD9",
+      "name":"Plane",
+      "path":"plane"
+    },
+    "environment":{
+      "uid":"5F5887BCF726",
+      "itemsPerFeed":10,
+      "description":"",
+      "name":"AMEE",
+      "owner":"",
+      "path":"",
+      "itemsPerPage":10
+    },
+    "created":"2007-08-01 09:00:23.0",
+    "name":"Generic",
+    "path":"generic",
+    "itemDefinition":{
+      "uid":"441BF4BEA15B",
+      "environment":{
+        "uid":"5F5887BCF726"
+      },
+      "created":"2007-07-27 09:30:44.0",
+      "name":"Plane Generic",
+      "drillDown":"type,size",
+      "modified":"2007-07-27 09:30:44.0"
+    },
+    "modified":"2007-08-01 09:00:23.0"
+  },
+  "path":"/transport/plane/generic",
+  "children":{
+    "pager":{
+      "to":10,
+      "lastPage":2,
+      "nextPage":2,
+      "items":11,
+      "start":0,
+      "itemsFound":10,
+      "requestedPage":1,
+      "currentPage":1,
+      "from":1,
+      "itemsPerPage":10,
+      "previousPage":-1
+    },
+    "dataItems":{
+      "label":"DataItems",
+      "rows":[
+        {
+          "uid":"E98F73AE9B40",
+          "startDate":"2009-01-27T17:35:37Z",
+          "kgCO2PerPassengerKm":"-1.",
+          "source":"N/A",
+          "created":"2009-01-27 17:35:37.0",
+          "path":"E98F73AE9B40",
+          "endDate":"",
+          "label":"auto,one way",
+          "kgCO2PerPassengerJourney":"0",
+          "type":"auto",
+          "modified":"2009-01-27 17:35:37.0",
+          "size":"one way"
+        },
+        {
+          "uid":"601248F5F793",
+          "startDate":"2009-01-27T20:03:26Z",
+          "kgCO2PerPassengerKm":"-1.",
+          "source":"N/A",
+          "created":"2009-01-27 20:03:26.0",
+          "path":"601248F5F793",
+          "endDate":"",
+          "label":"auto,return",
+          "kgCO2PerPassengerJourney":"0",
+          "type":"auto",
+          "modified":"2009-01-27 20:03:26.0",
+          "size":"return"
+        },
+        {
+          "uid":"AD63A83B4D41",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.1753",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"AD63A83B4D41",
+          "endDate":"",
+          "label":"domestic",
+          "kgCO2PerPassengerJourney":"0.0000",
+          "type":"domestic",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"-"
+        },
+        {
+          "uid":"FFC7A05D54AD",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.0000",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"FFC7A05D54AD",
+          "endDate":"",
+          "label":"domestic,one way",
+          "kgCO2PerPassengerJourney":"81.2000",
+          "type":"domestic",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"one way"
+        },
+        {
+          "uid":"F5498AD6FC75",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.0000",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"F5498AD6FC75",
+          "endDate":"",
+          "label":"domestic,return",
+          "kgCO2PerPassengerJourney":"162.0000",
+          "type":"domestic",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"return"
+        },
+        {
+          "uid":"7D4220DF72F9",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.1106",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"7D4220DF72F9",
+          "endDate":"",
+          "label":"long haul",
+          "kgCO2PerPassengerJourney":"0.0000",
+          "type":"long haul",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"-"
+        },
+        {
+          "uid":"46117F6C0B7E",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.0000",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"46117F6C0B7E",
+          "endDate":"",
+          "label":"long haul,one way",
+          "kgCO2PerPassengerJourney":"844.0000",
+          "type":"long haul",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"one way"
+        },
+        {
+          "uid":"96D538B1B246",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.0000",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"96D538B1B246",
+          "endDate":"",
+          "label":"long haul,return",
+          "kgCO2PerPassengerJourney":"1688.0000",
+          "type":"long haul",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"return"
+        },
+        {
+          "uid":"9DA419052FDF",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.0983",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"9DA419052FDF",
+          "endDate":"",
+          "label":"short haul",
+          "kgCO2PerPassengerJourney":"0.0000",
+          "type":"short haul",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"-"
+        },
+        {
+          "uid":"84B4A14C7424",
+          "startDate":"2007-08-01T09:00:41+01:00",
+          "kgCO2PerPassengerKm":"0.0000",
+          "source":"defra/amee 2008",
+          "created":"2007-08-01 09:00:41.0",
+          "path":"84B4A14C7424",
+          "endDate":"",
+          "label":"short haul,one way",
+          "kgCO2PerPassengerJourney":"129.0000",
+          "type":"short haul",
+          "modified":"2007-08-01 09:00:41.0",
+          "size":"one way"
+        }
+      ]
+    },
+    "dataCategories":[
+      {
+        "uid":"01900C469CDB",
+        "name":"Airports",
+        "path":"airports"
+      },
+      {
+        "uid":"0D4F2C945AA3",
+        "name":"Freight",
+        "path":"freight"
+      },
+      {
+        "uid":"9959AE4168BA",
+        "name":"Passenger class",
+        "path":"passengerclass"
+      }
+    ]
+  },
+  "dataItemActions":{
+    "allowCreate":false,
+    "allowView":true,
+    "allowList":false,
+    "allowModify":false,
+    "allowDelete":false
+  },
+  "actions":{
+    "allowCreate":false,
+    "allowView":true,
+    "allowList":false,
+    "allowModify":false,
+    "allowDelete":false
+  }
+}

@@ -1,0 +1,6 @@
+{"dataCategory":{"name":"Business","uid":"99B121BB416C","path":"business"},
+"profile":{"uid":"E0BCB3704D15"},"profileDate":"200904","path":"/business","totalAmountPerMonth":"0",
+"children":{"profileItems":{},"pager":{},
+"dataCategories":[{"name":"Energy","uid":"066196F049DD","path":"energy"},
+{"name":"Globalwarmingpotentials","uid":"31A2C4DED365","path":"globalWarmingPotentials"},
+{"name":"Waste","uid":"3035D381872B","path":"waste"}]}}
