@@ -1,5 +1,5 @@
 %p
-  Your carbon emissions are shown below.
+  Your personal share of your flight's carbon emissions are shown below.
 
 #carbonCalculator.inactive
   .airportEntry
@@ -24,3 +24,7 @@
       of rainforest one year to absorb this
       
   = link_to "Enter another flight", root_path, :id => "submitButton"
+  
+  
+  #powered_by
+    = link_to image_tag("/images/amee.png"), "http://amee.cc"
