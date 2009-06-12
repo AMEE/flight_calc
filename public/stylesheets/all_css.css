@@ -180,34 +180,34 @@ ul.suggestions li{
 	IMAGES/BACKGROUNDS
 =====================================================*/
 div#carbonCalculator, form#carbonCalculator{
-	background: #FFF url('/images/bg_world.png') no-repeat scroll top left;
+	background: #FFF url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_world.png') no-repeat scroll top left;
 }
 #originLabel{
-	background: transparent url('/images/bg_origin_label.png') no-repeat scroll top left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_origin_label.png') no-repeat scroll top left;
 }
 #destinationLabel{
-	background: transparent url('/images/bg_destination_label.png') no-repeat scroll top left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_destination_label.png') no-repeat scroll top left;
 }
 
 input.loading{
-	background: #fff url('/images/ajax-loader.gif') no-repeat scroll right 7px;
+	background: #fff url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/ajax-loader.gif') no-repeat scroll right 7px;
 }
 
 #submitButton{
-	background: #ca0002 url('/images/bg_submit_button.png') no-repeat scroll top left;
+	background: #ca0002 url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_submit_button.png') no-repeat scroll top left;
 }
 
 .inactive #originLabel{
-	background: transparent url('/images/bg_origin_label_inactive.png') no-repeat scroll top left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_origin_label_inactive.png') no-repeat scroll top left;
 }
 .inactive #destinationLabel{
-	background: transparent url('/images/bg_destination_label_inactive.png') no-repeat scroll top left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_destination_label_inactive.png') no-repeat scroll top left;
 }
 div#results{
-	background: transparent url('/images/bg_results.png') no-repeat scroll top left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_results.png') no-repeat scroll top left;
 }
 ul.suggestions{
-	background: transparent url('/images/bg_grey.png') repeat scroll top left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_grey.png') repeat scroll top left;
 }
 div#powered_by {
 	bottom: 19px;
@@ -218,7 +218,7 @@ div#powered_by {
 	
 }
 div#about-calculator{ 
-	background: transparent url('/images/bg_destination_label_inactive.png') no-repeat scroll bottom left;
+	background: transparent url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bg_destination_label_inactive.png') no-repeat scroll bottom left;
 	width: 100px;
 	height: 30px;
 	position:absolute;	
@@ -418,39 +418,39 @@ div#results p span{
 */
 
 .fc-tbx .tl{
-	background: url('/images/tl.gif') no-repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/tl.gif') no-repeat;
 }
 .fc-tbx .t{
-	background: url('/images/t.gif') no-repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/t.gif') no-repeat;
 	height: 26px;
 }
 .fc-tbx .tr{
-	background: url('/images/tr.gif') no-repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/tr.gif') no-repeat;
 }
 .fc-tbx .l{
-	background: url('/images/l.png') repeat-y;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/l.png') repeat-y;
 	width : 6px;
 }
 .fc-tbx .r{
-	background: url('/images/r.png') repeat-y;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/r.png') repeat-y;
 	width: 6px;
 }
 .fc-tbx .bl{
-	background: url('/images/bl.png') no-repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/bl.png') no-repeat;
 }
 .fc-tbx .b{
-	background: url('/images/b.png') repeat-x;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/b.png') repeat-x;
 	height:6px;
 }
 .fc-tbx .br{
-	background: url('/images/br.png') no-repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/br.png') no-repeat;
 }
 .fc-tbx .c{
-	background: url('/images/c.png') repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/c.png') repeat;
 }
 .fc-tbx a.close {
 	float: right;
-	background: url('/images/close.png') no-repeat;
+	background: url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/close.png') no-repeat;
 	position: relative;
 	margin-left: 5px;
 	display: block;
@@ -476,7 +476,7 @@ div#results p span{
 }
 
 .ajax_loader {
-	background : url('/images/ajax-loader.gif') no-repeat center;
+	background : url('http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0/images/ajax-loader.gif') no-repeat center;
 	width : 200px;
 	height : 150px;
 }

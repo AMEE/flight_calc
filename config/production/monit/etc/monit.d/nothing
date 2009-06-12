@@ -1,5 +1,5 @@
 check process memcached with pidfile /opt/apps/cnn-carbon-calculator/current/log/memcached.pid
-	start program = "/usr/bin/memcached -d -m 64 -l 127.0.0.1 -p 11211 -P /opt/apps/cnn-carbon-calculator/current/log/memcached.pid -u deploy"
+	start program = "/usr/bin/memcached -d -m 64 -l 127.0.0.1 -p 11211 -P /opt/apps/cnn-carbon-calculator/shared/log/memcached.pid -u deploy"
 	stop program = "/usr/bin/killall memcached"
 	if 3 restarts within 5 cycles then timeout
 
