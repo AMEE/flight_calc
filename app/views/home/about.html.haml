@@ -2,11 +2,15 @@
   = link_to "back", root_path
 
 %p
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  CO2 emissions are estimated on the basis of standard CO2 emission rates (per km) for air travel and the distance flown (km). Journey distances are calculated as the 'great circle' distance between departure and arrival locations based on the latitude and longitude of the specified airports. 
+  
+%p
+  This distance is then inflated by 9% to account for indirect routing and congestion. Distinct emissions factors and passenger loading are assumed for short (<3500 km) and long (>3500 km) haul flights. This reflects the larger capacities typically used in long haul flights, as well as the higher per km CO2 emission rates for short haul flights, of which a comparatively small proportion is represented by cruising. For return flights, emissions are simply doubled.
+  
 
 %p
-  For more information please see the plane wiki 
-  = link_to "here", "http://wiki.amee.com/index.php/Plane_generic"
+  For more information please see the wiki 
+  = link_to "here", "http://wiki.amee.com/index.php/Plane_generic", :target => "_blank"
   
 %p
   Click 

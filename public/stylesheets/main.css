@@ -156,15 +156,15 @@ div#powered_by {
 	
 }
 div#about-calculator{ 
-	background: transparent url('/images/bg_about_label.png') no-repeat scroll bottom left;
+	background: transparent url('/images/bg_destination_label_inactive.png') no-repeat scroll bottom left;
 	width: 100px;
-	height: 21px;
+	height: 30px;
 	position:absolute;	
 	top:0px;
 	right:10px;
 	font-size:13px;
 	font-weight:bold;
-	line-height:20px;
+	line-height:30px;
 	text-align:center;
 	color:#FFFFFF;
 	text-decoration:none;
