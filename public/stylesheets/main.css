@@ -155,6 +155,32 @@ div#powered_by {
 
 	
 }
+div#about-calculator{ 
+	background: transparent url('/images/bg_about_label.png') no-repeat scroll bottom left;
+	width: 100px;
+	height: 21px;
+	position:absolute;	
+	top:0px;
+	right:10px;
+	font-size:13px;
+	font-weight:bold;
+	line-height:20px;
+	text-align:center;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+div#about-calculator a{ 
+	font-size:13px;
+	font-weight:bold;
+	line-height:20px;
+	text-align:center;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+
+
 
 /*==================================================
 	POSITIONING/SIZES
@@ -164,6 +190,7 @@ div#powered_by {
 	height:400px;
 	margin:auto;
 	padding-top:9px;
+	position:relative;
 }
 h1,p{
 	margin-left:10px;

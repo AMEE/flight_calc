@@ -1,7 +1,14 @@
+#about-calculator
+  = link_to "About", about_path
+
 %p
   Enter your origin and destination airports or airport codes below to calculate your share of the carbon emissions for your flight.
 
+
 - form_tag flight_co2_calculations_path, :id => "carbonCalculator" do
+
+  
+
   .airportEntry
     = label_tag 'flight_co2_calculation[origin_airport]', 'Origin', :id => "originLabel"
     = text_field_tag "flight_co2_calculation[origin_airport]", "", :id => "flightOrigin"
