@@ -4,7 +4,7 @@
   %head
     %title Carbon Calculator
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag "autocomplete", 'main'
+    = stylesheet_link_tag "all_css-min"
     /[if IE]
       %style{:type => "text/css"}
         @import url(/stylesheets/ie.css);
@@ -20,6 +20,9 @@
       #powered_by
         = link_to image_tag("/images/amee.png", :alt => "powered by AMEE"), "http://amee.cc", :target => "_blank"
     %script{:src => "http://ajax.googleapis.com/ajax/libs/mootools/1.2.2/mootools-yui-compressed.js"}
-    = javascript_include_tag "mootools-1.2.2.2-more", "clientcide.compressed", "formcheck", "application"
+    = javascript_include_tag "all_js-min"
+    
+    
+
     
     
