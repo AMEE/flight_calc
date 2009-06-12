@@ -28,17 +28,20 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 # We dont have prod password and shit just yet!
-::Amee::Config.set do |config|
-  config[:username] = "hookercookerman"
-  config[:password] = "553eaec5"
-  config[:server] = "stage.amee.com"
-end
-
-
 # ::Amee::Config.set do |config|
-#   config[:username] = "cnn"
-#   config[:password] = "aa221361"
-#   config[:server] = "live.amee.com"
+#   config[:username] = "hookercookerman"
+#   config[:password] = "553eaec5"
+#   config[:server] = "stage.amee.com"
 # end
+# 
+
+
+
+
+::Amee::Config.set do |config|
+  config[:username] = "cnn"
+  config[:password] = "aa221361"
+  config[:server] = "live.amee.com"
+end
 
 CNN_AMEE_PROFILE = "9D7C819AB003"
