@@ -43,8 +43,6 @@ config.action_view.cache_template_loading            = true
 #        "http://i.cdn.turner.com/cnn/.element/css/2.0/misc/intl/carbon.calc/1.0"
 #      elsif source.starts_with?('/javascripts')
 #        "http://i.cdn.turner.com/cnn/.element/js/2.0/misc/intl/carbon.calc/1.0"
-#      else
-#        "http://i.cdn.turner.com/cnn/.element/css/2.0/misc/intl/carbon.calc/1.0"
 #      end
 # }
 

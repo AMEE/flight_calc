@@ -1,5 +1,16 @@
 # Don't cause the server to break if Passenger module not loaded
 <IfModule passenger_module>
+  # Deflate
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4.0[678] no-gzip
+  BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+
+  <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">  
+    ExpiresActive On 
+    ExpiresDefault "access plus 1 year" 
+  </FilesMatch>
+
 	<VirtualHost *:80>
 	  ServerName cnn.dynamic50.com
         ServerAlias assets0.dynamic50.com
@@ -13,6 +24,7 @@
 	  #
 	  # Check for maintenance file and redirect all requests
 	  RewriteEngine On
+	  RewriteRule (.*)-cb\d+\.(.*)$ $1.$2 [L]
 	  RewriteCond %{REQUEST_URI} !\.(css|jpg|png|gif)$
 	  RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
 	  RewriteCond %{SCRIPT_FILENAME} !maintenance.html
