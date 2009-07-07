@@ -26,12 +26,7 @@
     %p#recovery
       It would take
       %span#area 
-        - number = (@data_item.co2_value.to_f*10)
-        - if number.to_i.to_s.size <= 3
-          = "#{"%.1f" % number} M<sup>2</sup>"
-        - else
-          = "#{"%.0f" % number} M<sup>2</sup>"
-       
+        = "#{"%.3f" % (@data_item.co2_value.to_f/1000)} HA" 
       of rainforest one year to absorb this
       
   = link_to "Enter another flight", root_path, :id => "submitButton"
