@@ -2,6 +2,9 @@ require 'deprec'
 require 'capistrano/ext/multistage'
 set :stages, %w(staging production)
 set :default_stage, "production"
+set :rails_env, "production"
+set :stage, "production"
+set :application, "cnn-carbon-calculator"
 
 # Settings for server
 set :ruby_vm_type,      :ree        # :ree, :mri

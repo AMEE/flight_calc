@@ -9,7 +9,7 @@ role :mail, "192.168.1.72"
 role :sphinx, "192.168.1.72"
 
 
-
+set :rails_env, "production"
 
 namespace :deploy do
   desc "Create the database yaml file"
