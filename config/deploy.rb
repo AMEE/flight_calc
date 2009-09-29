@@ -26,31 +26,31 @@ ssh_options[:forward_agent] = true
 # Some custom tasks
 namespace :rake do
   task :show_tasks do
-    run("cd #{deploy_to}/current; /usr/local/bin/rake -T RAILS_ENV=production")
+    run("cd #{deploy_to}/current; /usr/local/bin/rake -T RAILS_ENV=#{stage}")
   end
   
   task :install_gems, :roles => :app  do
-    run("cd #{deploy_to}/current; /usr/local/bin/rake gems:install RAILS_ENV=production")
+    run("cd #{deploy_to}/current; /usr/local/bin/rake gems:install RAILS_ENV=#{stage}")
   end
   
   task :rake_amee_import_airports do
-    run("cd #{deploy_to}/current; /usr/local/bin/rake amee:import_airports RAILS_ENV=production")
+    run("cd #{deploy_to}/current; /usr/local/bin/rake amee:import_airports RAILS_ENV=#{stage}")
   end
   
   task :index_sphinx do
-    run("cd #{deploy_to}/current; /usr/local/bin/rake thinking_sphinx:index RAILS_ENV=production")
+    run("cd #{deploy_to}/current; /usr/local/bin/rake thinking_sphinx:index RAILS_ENV=#{stage}")
   end
   
   task :configure_sphinx do
-    run("cd #{deploy_to}/current; /usr/local/bin/rake thinking_sphinx:configure RAILS_ENV=production")
+    run("cd #{deploy_to}/current; /usr/local/bin/rake thinking_sphinx:configure RAILS_ENV=#{stage}")
   end
   
   task :clear_cache do
-    run("cd #{deploy_to}/current; script/console production; Rails.cache.clear; quit")
+    run("cd #{deploy_to}/current; script/console #{stage}; Rails.cache.clear; quit")
   end
   
   task :tail_logs do
-    run("cd #{deploy_to}/shared/log; tail -f production.log")
+    run("cd #{deploy_to}/shared/log; tail -f #{stage}.log")
   end
   
   

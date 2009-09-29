@@ -41,8 +41,8 @@ end
 # Restart passenger on deploy
 desc "Restarting mod_rails with restart.txt"
 task :before_restart, :except => { :no_release => true } do
-  run "cd #{current_path}; #{sudo} rake gems:install RAILS_ENV=staging"
-  run "cd #{current_path}; rake gems:unpack:dependencies RAILS_ENV=staging"
-  run "cd #{current_path}; rake gems:build RAILS_ENV=staging"  
+  # run "cd #{current_path}; #{sudo} rake gems:install RAILS_ENV=production"
+  #  run "cd #{current_path}; rake gems:unpack:dependencies RAILS_ENV=production"
+  #  run "cd #{current_path}; rake gems:build RAILS_ENV=production"  
   run "touch #{current_path}/tmp/restart.txt"
 end
