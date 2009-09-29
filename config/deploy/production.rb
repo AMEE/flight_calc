@@ -1,12 +1,12 @@
 # Domain and Application settings
 set :application, "cnn-carbon-calculator"
-set :domain, "cnn.dynamic50.com"
+set :domain, "192.168.1.72"
 
-role :app, "cnn.dynamic50.com"
-role :web, "cnn.dynamic50.com"
-role :db,  "cnn.dynamic50.com", :primary => true
-role :mail, "cnn.dynamic50.com"
-role :sphinx, "cnn.dynamic50.com"
+role :app, "192.168.1.72"
+role :web, "192.168.1.72"
+role :db,  "192.168.1.72", :primary => true
+role :mail, "192.168.1.72"
+role :sphinx, "192.168.1.72"
 
 
 
@@ -36,4 +36,13 @@ namespace :deploy do
   task :tail_log do
     run "tail -f #{shared_path}/log/production.log"
   end
+end
+
+# Restart passenger on deploy
+desc "Restarting mod_rails with restart.txt"
+task :before_restart, :except => { :no_release => true } do
+  run "cd #{current_path}; #{sudo} rake gems:install RAILS_ENV=staging"
+  run "cd #{current_path}; rake gems:unpack:dependencies RAILS_ENV=staging"
+  run "cd #{current_path}; rake gems:build RAILS_ENV=staging"  
+  run "touch #{current_path}/tmp/restart.txt"
 end

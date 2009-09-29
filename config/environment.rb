@@ -16,6 +16,7 @@ Rails::Initializer.run do |config|
   config.gem "httparty", :version => '~> 0.4.3'
   config.gem "wycats-moneta", :lib => "moneta", :source => 'http://gems.github.com'
   config.gem "uuidtools"
+  config.gem "crack"
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

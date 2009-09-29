@@ -13,7 +13,7 @@ set :db_server_type,    :mysql      # :mysql, :postgresql, :sqlite
 set :repository,  "git@github.com:hookercookerman/cnn-airport-cal.git"
 set :scm, "git"
 set :git_enable_submodules,1
-set :user, "deploy"
+set :user, "dynamic50"
 set :password, "80shour2"
 set :git_shallow_clone, 1 # We don't need the full history
 set :deploy_via, :remote_cache
@@ -75,4 +75,4 @@ end
 
 # Gems and packages to install
 # set :packages_for_project, %w(libmagick9-dev imagemagick libfreeimage3) # list of packages to be installed
-set :gems_for_project, %w(treetop json_pure nokogiri faker rack_hoptoad haml mislav-will_paginate rack hookercookerman-amee httparty wycats-moneta) # list of gems to be installed
+# set :gems_for_project, %w(treetop json_pure nokogiri faker rack_hoptoad haml mislav-will_paginate rack hookercookerman-amee httparty wycats-moneta) # list of gems to be installed
