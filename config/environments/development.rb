@@ -22,13 +22,3 @@ config.action_mailer.raise_delivery_errors = false
 end
 
 CNN_AMEE_PROFILE = "241EE37F2D38"
-
-ActionController::Base.asset_host = Proc.new { |source|
-     if source.starts_with?('/images')
-       "http://i.cdn.turner.com/cnn/.element/img/2.0/misc/intl/carbon.calc/1.0"
-     elsif source.starts_with?('/stylesheets')
-       "http://i.cdn.turner.com/cnn/.element/css/2.0/misc/intl/carbon.calc/1.0"
-     elsif source.starts_with?('/javascripts')
-       "http://i.cdn.turner.com/cnn/.element/js/2.0/misc/intl/carbon.calc/1.0"
-     end
-}
