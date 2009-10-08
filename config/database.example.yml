@@ -1,31 +1,29 @@
 development:
   adapter: mysql
-  database: cnn-airport-dev
-  username: root
+  database: 
+  username: 
   password:
   encoding: utf8
   
 test:
   adapter: mysql
-  database: cnn-airport-test
-  username: root
+  database: 
+  username: 
   password:
   socket: /tmp/mysql.sock
   encoding: utf8
   
 production:
   adapter: mysql
-  database: cnn-airport-prod
-  username: root
+  database: 
+  username: 
   password:
   encoding: utf8
   
 staging:
   adapter: mysql
-  database: cnn-airport-stage
-  username: root
+  database: 
+  username: 
   password:
   encoding: utf8
 
-cucumber:
-  <<: *TEST
