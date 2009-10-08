@@ -9,20 +9,17 @@ class FlightCo2CalculationsController < ApplicationController
   
   def create
     if @origin_airport && @destination_airport
-      @data_item = Rails.cache.fetch([@origin_airport, @destination_airport,"data-item-#{@return_flight}"]) do
-        data_item_uid =  @return_flight ? AmeeConnection.auto_return_uid : AmeeConnection.auto_oneway_uid
-        AmeeConnection.session.get_data_item("/data/transport/plane/generic/#{data_item_uid}", 
-          :query => {:IATACode1 => @origin_airport.iata_code, :IATACode2 => @destination_airport.iata_code})
-      end
+      # Create a profile if there isn't one already stored in the session
+      session[:profile] ||= AMEE::Profile::Profile.create(global_amee_connection).uid
+      uid = AMEE::Data::DrillDown.get(global_amee_connection, "/data/transport/plane/generic/drill?size=#{@return_flight ? "return" : "one%20way"}&type=auto").data_item_uid
+      @item = AMEE::Profile::Item.create_without_category(
+        global_amee_connection, 
+        "/profiles/#{session[:profile]}/transport/plane/generic",
+        uid,
+        :IATACode1 => @origin_airport.iata_code, 
+        :IATACode2 => @destination_airport.iata_code,
+        :name => UUIDTools::UUID.timestamp_create.to_s)
       @distance = Airport.distance(@origin_airport, @destination_airport, @return_flight)
-      run_later do
-        AmeeConnection.profile.create_profile_item("/transport/plane/generic", @data_item.uid, 
-          :fields => {
-            :name => UUIDTools::UUID.timestamp_create.to_s, 
-            :IATACode1 => @origin_airport.iata_code, 
-            :IATACode2 => @destination_airport.iata_code
-          })
-      end
     else
       render :new
     end

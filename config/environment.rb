@@ -13,7 +13,7 @@ Rails::Initializer.run do |config|
   config.gem 'faker', :lib => 'faker', :version => '~> 0.3.1'
   config.gem 'haml', :lib => 'haml'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
-  config.gem 'hookercookerman-amee', :lib => 'amee', :version => "~> 0.1.9"
+  config.gem 'amee', :version => "~> 2.0.26"
   config.gem "httparty", :version => '~> 0.4.3'
   config.gem "wycats-moneta", :lib => "moneta", :source => 'http://gems.github.com'
   config.gem "uuidtools"
@@ -38,7 +38,6 @@ Rails::Initializer.run do |config|
   config.cache_store = :mem_cache_store, "127.0.0.1:11211"
   config.cache_store = :mem_cache_store, { :namespace => 'cnn-flight' }
 
-
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
@@ -54,5 +53,3 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
-
-Amee.logger = RAILS_DEFAULT_LOGGER

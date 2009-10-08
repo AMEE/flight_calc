@@ -21,12 +21,12 @@
         My flights covered
       %span#distance= "#{"%.0f" % @distance} Km"
       and produced
-      %span#mass= "#{"%.3f" % (@data_item.co2_value.to_f/1000)} tonnes " 
+      %span#mass= "#{"%.3f" % (@item.total_amount.to_f/1000)} tonnes " 
       %small of CO2 per person
     %p#recovery
       It would take
       %span#area 
-        = "#{"%.3f" % (@data_item.co2_value.to_f/1000)} HA" 
+        = "#{"%.3f" % (@item.total_amount.to_f/1000)} HA" 
       of rainforest one year to absorb this
       
   = link_to "Enter another flight", root_path, :id => "submitButton"

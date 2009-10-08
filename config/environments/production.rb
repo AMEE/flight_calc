@@ -26,11 +26,3 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
-
-::Amee::Config.set do |config|
-  config[:username] = "cnn"
-  config[:password] = "aa221361"
-  config[:server] = "live.amee.com"
-end
-
-CNN_AMEE_PROFILE = "9D7C819AB003"
