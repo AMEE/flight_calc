@@ -14,3 +14,5 @@ public/javascripts/all.js
 public/stylesheets/all.js
 coverage/*
 .dotest/*
+config/amee.yml
+config/my_amee.yml
