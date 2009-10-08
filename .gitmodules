@@ -10,6 +10,4 @@
 [submodule "vendor/plugins/pickle"]
 	path = vendor/plugins/pickle
 	url = git://github.com/ianwhite/pickle.git
-[submodule "vendor/plugins/run_later"]
-	path = vendor/plugins/run_later
-	url = git://github.com/mattmatt/run_later.git
+
