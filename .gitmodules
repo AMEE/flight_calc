@@ -7,12 +7,6 @@
 [submodule "vendor/plugins/machinist"]
 	path = vendor/plugins/machinist
 	url = git://github.com/notahat/machinist.git
-[submodule "vendor/plugins/rspec-rails"]
-	path = vendor/plugins/rspec-rails
-	url = git://github.com/dchelimsky/rspec-rails.git
-[submodule "vendor/plugins/rspec"]
-	path = vendor/plugins/rspec
-	url = git://github.com/dchelimsky/rspec.git
 [submodule "vendor/plugins/pickle"]
 	path = vendor/plugins/pickle
 	url = git://github.com/ianwhite/pickle.git
