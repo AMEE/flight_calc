@@ -1,26 +1,25 @@
 development:
-  adapter: mysql
-  database: 
-  username: 
-  password:
-  encoding: utf8
+  # Sqlite Settings
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
   
 test:
-  adapter: mysql
-  database: 
-  username: 
-  password:
-  socket: /tmp/mysql.sock
-  encoding: utf8
-  
-production:
-  adapter: mysql
-  database: 
-  username: 
-  password:
-  encoding: utf8
-  
+  # Sqlite Settings
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+    
 staging:
+  adapter: mysql
+  database: 
+  username: 
+  password:
+  encoding: utf8
+
+production:
   adapter: mysql
   database: 
   username: 
