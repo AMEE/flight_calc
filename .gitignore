@@ -15,3 +15,4 @@ coverage/*
 .dotest/*
 config/amee.yml
 config/my_amee.yml
+nbproject
