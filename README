@@ -1,0 +1,38 @@
+AMEE Flight Calculator
+======================
+
+This is an example Rails application that uses AMEE to calculates emissions from
+air travel.
+
+You can create your own copy of this application at http://my.amee.com/templates/1-flight-calculator,
+or you can use this codebase to run your own copy on your own servers. You may also
+use it as a base from which to develop your own AMEE applications.
+
+License
+-------
+
+MIT (see the COPYING file)
+
+Requirements
+------------
+
+Rails 2.3.4
+memcache
+gems:
+  amee ~> 2.0.26
+  haml
+  uuidtools
+
+Setup
+-----
+
+Download the app, and customise config/amee.example.yml and config/database.example.yml
+with your own settings. Then run:
+
+  rake db:schema:load
+
+to set up the database. Then, you should build the local airport cache by running:
+
+  rake amee:import_airports
+
+Your app is then ready to use by running script/server.
