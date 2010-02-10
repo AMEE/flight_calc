@@ -29,7 +29,7 @@ Rails::Initializer.run do |config|
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
   config.cache_store = :mem_cache_store
   config.cache_store = :mem_cache_store, "127.0.0.1:11211"
-  config.cache_store = :mem_cache_store, { :namespace => 'cnn-flight' }
+  config.cache_store = :mem_cache_store, { :namespace => 'amee-flight' }
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
