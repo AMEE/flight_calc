@@ -1,3 +1,0 @@
-class CnnUser
-
-end
