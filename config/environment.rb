@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :lib => 'haml'
   config.gem 'amee', :version => "~> 2.0.26"
   config.gem "uuidtools"
+  config.gem 'hoptoad_notifier'
   
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

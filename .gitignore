@@ -15,4 +15,5 @@ coverage/*
 .dotest/*
 config/amee.yml
 config/my_amee.yml
+config/hoptoad.yml
 nbproject
