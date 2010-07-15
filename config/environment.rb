@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem 'haml', :lib => 'haml'
-  config.gem 'amee', :version => "~> 2.0.26"
+  config.gem 'amee', :version => "~> 2.0.35"
   config.gem "uuidtools"
   config.gem 'hoptoad_notifier'
   
@@ -46,10 +46,5 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
-
-  # Set the timeout value for the AMEE API to 10 seconds
-  config.to_prepare do
-    AMEE::Rails.connection.timeout = 10
-  end
 
 end
